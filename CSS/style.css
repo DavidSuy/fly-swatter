@@ -1,15 +1,22 @@
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h2{
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 
 header {
   background-color: brown;
+  display: flex;
+  justify-content: space-between;
 } 
+
+header a{
+  margin-top: 21.44px;
+  margin-bottom: 21.44px;
+}
 
 #gameContainer h1 {
   text-align: center;
@@ -21,4 +28,38 @@ article {
   margin: auto;
 }
 
+form > * {
+  display: block;
+  width: 200px;
+  margin: auto;
+}
 
+select {
+  text-align: center;
+}
+
+button {
+  width: 180px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+footer{
+  background-color: brown;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+header span:nth-child(2){
+  padding-top: 30px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+header span:nth-child(2) a{
+  color: white;
+  text-decoration: none;
+}
