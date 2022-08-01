@@ -1,19 +1,21 @@
 Team Agreement
 
-Cooperation Plan
-    1.Strengths?
-Miguel’s strength within this program is CSS and HTML. With the ability to learn new stuff, work as a team, and plan effectively. 
-Jackson is good at Javascript and referencing css element paths. 
-David's strengths are structured html layout/ grid. Decent understanding with github and version control
-We can use our strengths to equally divide the load.
-    2. How can you best utilize these strengths in the execution of your project?
+## Cooperation Plan
 
-    3. What professional competencies do you wish to develop?
-Jackson: I wish to develop my growth mindset some more, and also improve my professional quality.
-David wishes to work on his communication competency, especially in the speaking Competency.
-Miguel: I really want to work on the ability to increase my quality of work. To be able to remember the syntax and purpose behind some syntax. 
-    4. Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
-We are going to look into using Trello, creating to-do lists to divide up the work, and setting expectations for the task on hand. We’ll use github to manage our projects.
+1. Strengths?
+- Miguel’s strength within this program is CSS and HTML. With the ability to learn new stuff, work as a team, and plan effectively. 
+- Jackson is good at Javascript and referencing css element paths. 
+- David's strengths are structured html layout/ grid. Decent understanding with github and version control
+
+
+2. How can you best utilize these strengths in the execution of your project?
+- We can use our strengths to equally divide the load.
+3. What professional competencies do you wish to develop?
+- Jackson: I wish to develop my growth mindset some more, and also improve my professional quality.
+- David wishes to work on his communication competency, especially in the speaking Competency.
+- Miguel: I really want to work on the ability to increase my quality of work. To be able to remember the syntax and purpose behind some syntax. 
+4. Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
+- We are going to look into using Trello, creating to-do lists to divide up the work, and setting expectations for the task on hand. We’ll use github to manage our projects.
 
 Conflict Plan
 1. What will be your group’s process to resolve conflict, when it arises?
