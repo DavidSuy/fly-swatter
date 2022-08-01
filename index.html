@@ -11,12 +11,28 @@
 
 <body>
 <header>
-  <h1>Fly Swatter</h1>
+  <span><h1>Fly Swatter</h1></span>
+  <span>
+<a href="about">About</a>
+  </span>
 </header>
   <main>
-    <div id="gameContainer">
-      <h1>Welcome to Fly Swatter<h1>
-          <article>
+    <div id="gameContainer"> 
+      <article id="timer">
+        <span></span>
+        <span></span>
+        <span>
+          <h3 id="countDownTimer">time: 60</h3>
+        </span>
+        <span>
+
+        </span>
+        <span>
+          <h3 id="playerScore">score: 420</h3>
+        </span>
+      </article>
+      <article style="display: none;">
+        <h1>Welcome to Fly Swatter<h1>
             <form action="">
               <label for="name">
                 <h2>Please Enter Your Name</h2>
