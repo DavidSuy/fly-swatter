@@ -14,24 +14,42 @@ function rendergame() {
 }
 
 
-//TODO
+//DONE
 function clearScreen(){
   //Clears the form and the h1 tag so that its a blank page, minus the header and footer
-  document.getElementById('gameContainer').style.display = "none"; 
+  document.getElementById('startForm').style.display = "none"; 
 }
 
 
 //TODO
 function rendergameScreen(){
-  //adds a div the width of the screen and about 1000px that has a background of our game
-  //adds a scoreboard to the top right
-  //adds a timer box to the top center
+  document.querySelector('article').style.display = "";
 }
 
 
 //TODO
 function beginGame(){
   //fills the timer with a sixty second countdown
+  //Starts creating fly's until the countdown ends
+  let timer = document.getElementById('timer').nth-child();
+  let score = document.getElementById('timer').nth-child(2);
+  let time = 60;
+  var timerTracker = setInterval(runClock, 1000);
+  function runClock(){
+    timer.textContext = time;
+    time--;
+    //TODO based on difficulty, run the timer 
+    if(time <= 0){
+      clearInterval(timerTracker);
+    }
+  }
+}
+function fly(hp, size, speed){
+  this.hp = hp;
+  this.size = size;
+  this.speed = speed;
+}
+function flyCreator(){
   //
 }
 
