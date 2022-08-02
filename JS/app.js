@@ -6,10 +6,11 @@ let time = 5;
 let isPlaying = false;
 
 // DOM Elements
-let difficulty = document.getElementById("difficulty").value;
-let nickname = document.querySelector("input").value;
+let gameContainer = document.getElementById("gameContainer");
 let timer = document.getElementById("countDownTimer");
 let score = document.getElementById("playerScore");
+let difficulty = document.getElementById("difficulty").value;
+let nickname = document.querySelector("input").value;
 
 // Event Listener
 startGameButton.addEventListener("click", startGame);
@@ -18,12 +19,14 @@ startGameButton.addEventListener("click", startGame);
 function startGame() {
   hideStartForm();
   showTimerBar();
+  showFlyzone();
   startTimer();
   // beginGame();
 }
 
 function endGame() {
   showLeaderBoard();
+  hideFlyzone();
 }
 
 // Fly Constructor
@@ -42,13 +45,20 @@ Fly.prototype.swatted = function () {};
 function hideStartForm() {
   document.getElementById("startForm").style.display = "none";
 }
-
 function showTimerBar() {
   document.getElementById("timer").style.display = "";
 }
-
+function showFlyzone() {
+  document.getElementById("flyzone").style.display = "";
+}
+function hideFlyzone() {
+  document.getElementById("flyzone").style.display = "none";
+}
 function showLeaderBoard() {
   document.getElementById("leaderBoard").style.display = "";
+}
+function hideLeaderBoard() {
+  document.getElementById("leaderBoard").style.display = "none";
 }
 
 function startTimer() {

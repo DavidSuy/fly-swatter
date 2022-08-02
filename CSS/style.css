@@ -22,6 +22,10 @@ header a {
   margin-bottom: 21.44px;
 }
 
+#flyzone {
+  cursor: url('/IMG/fly-swatter-pic.PNG'), auto;
+}
+
 #gameContainer h1 {
   text-align: center;
 }
