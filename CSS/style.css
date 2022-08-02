@@ -71,6 +71,14 @@ header span:nth-child(2) a{
   width: 98.5%;
 }
 
-#timer span{
-border: 10px solid red;
+#timer span:nth-child(3), #timer span:nth-child(5){
+border: 10px solid salmon;
 }
+
+ol{
+width: 100px;
+margin: auto;
+
+}
+
+
