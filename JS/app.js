@@ -20,12 +20,23 @@ function startGame() {
   showTimerBar();
   startTimer();
   // beginGame();
-
 }
 
 function endGame() {
   showLeaderBoard();
 }
+
+// Fly Constructor
+function Fly(hp = 1, color = "gray", size = 3, speed = 1) {
+  this.hp = hp;
+  this.color = color;
+  this.size = size;
+  this.speed = speed;
+}
+
+Fly.prototype.genRandLoc = function () {};
+Fly.prototype.renderFly = function () {};
+Fly.prototype.swatted = function () {};
 
 // Toggle Elments
 function hideStartForm() {
