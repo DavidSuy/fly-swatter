@@ -1,8 +1,11 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+}
 h1 {
   font-size: 2rem;
 }
 
-h2{
+h2 {
   font-size: 1rem;
 }
 
@@ -11,9 +14,9 @@ header {
   background-color: brown;
   display: flex;
   justify-content: space-between;
-} 
+}
 
-header a{
+header a {
   margin-top: 21.44px;
   margin-bottom: 21.44px;
 }
@@ -24,11 +27,11 @@ header a{
 
 article {
   border: 10px solid gray;
-  width: 80%; 
+  width: 80%;
   margin: auto;
 }
 
-form > * {
+form>* {
   display: block;
   width: 200px;
   margin: auto;
@@ -43,23 +46,30 @@ button {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  
+
 }
-footer{
+
+footer {
   background-color: brown;
+  margin: 0 auto;
+  width: 70%;
+  left: 20%;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
 }
 
 header h1 {
   display: inline-block;
 }
 
-header span:nth-child(2){
+header span:nth-child(2) {
   padding-top: 30px;
   text-align: center;
   margin-right: 20px;
 }
 
-header span:nth-child(2) a{
+header span:nth-child(2) a {
   color: white;
   text-decoration: none;
 }
@@ -71,14 +81,13 @@ header span:nth-child(2) a{
   width: 98.5%;
 }
 
-#timer span:nth-child(3), #timer span:nth-child(5){
-border: 10px solid salmon;
+#timer span:nth-child(3),
+#timer span:nth-child(5) {
+  border: 10px solid salmon;
 }
 
-ol{
-width: 100px;
-margin: auto;
+ol {
+  width: 100px;
+  margin: auto;
 
 }
-
-

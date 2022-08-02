@@ -20,6 +20,7 @@ function startGame() {
   showTimerBar();
   startTimer();
   // beginGame();
+
 }
 
 function endGame() {
