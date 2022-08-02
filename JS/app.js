@@ -1,55 +1,66 @@
-'use strict'
+"use strict";
 
-let startgame = document.getElementById('startGame');
-let time = 60;
+// Global Variables
+let startGameButton = document.getElementById("startGame");
+let time = 5;
+let isPlaying = false;
 
-//grabs the difficulty, and nickname, stores it and then clears the screen, renders the video game and then runs timer which starts the game
+// DOM Elements
+let difficulty = document.getElementById("difficulty").value;
+let nickname = document.querySelector("input").value;
+let timer = document.getElementById("countDownTimer");
+let score = document.getElementById("playerScore");
 
-function rendergame() {
-  let difficulty = document.getElementById('difficulty').value;
-  let nickname = document.querySelector('input').value;
-  
-  clearScreen();
-  rendergameScreen();
-  beginGame();
-}
+// Event Listener
+startGameButton.addEventListener("click", startGame);
 
-//DONE
-function clearScreen(){
-  //Clears the form and the h1 tag so that its a blank page, minus the header and footer
-  document.getElementById('startForm').style.display = "none"; 
-}
-
-function rendergameScreen(){
-  document.getElementById('timer').style.display = "";
+// Event Handler
+function startGame() {
+  hideStartForm();
+  showTimerBar();
+  startTimer();
+  // beginGame();
 
 }
 
+function endGame() {
+  showLeaderBoard();
+}
 
-//TODO
-function beginGame(){
+// Toggle Elments
+function hideStartForm() {
+  document.getElementById("startForm").style.display = "none";
+}
+
+function showTimerBar() {
+  document.getElementById("timer").style.display = "";
+}
+
+function showLeaderBoard() {
+  document.getElementById("leaderBoard").style.display = "";
+}
+
+function startTimer() {
   //fills the timer with a sixty second countdown
   //Starts creating fly's until the countdown ends
-  let timer = document.getElementById('countDownTimer');
-  let score = document.getElementById('playerScore');
   var timerTracker = setInterval(runClock, 1000);
-  function runClock(){
+  function runClock() {
     timer.innerHTML = time;
     time--;
-    //TODO based on difficulty, while the timer is running, spawn in flies 
-    if(time < 0){
+    //TODO based on difficulty, while the timer is running, spawn in flies
+    if (time < 0) {
       clearInterval(timerTracker);
+      endGame();
     }
   }
 }
-function fly(hp, size, speed){
+
+function fly(hp, size, speed) {
   this.hp = hp;
   this.size = size;
   this.speed = speed;
 }
-function flyCreator(){
+
+function flyCreator() {
   //
 }
-
-
-startgame.addEventListener('click', rendergame);
