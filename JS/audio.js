@@ -1,11 +1,13 @@
 "use strict";
 
 var audio, playbtn, seek_bar;
+audio = new Audio();
+audio.src = "Audio/jellyfish_jam.mp3";
+audio.loop = true;
+
 function initAudioPlayer() {
-  audio = new Audio();
-  audio.src = "Audio/jellyfish_jam.mp3";
-  audio.loop = true;
+  audio.muted = false;
   audio.play();
-  console.log("hi");
+  console.log("test of life");
 }
-window.addEventListener("load", initAudioPlayer);
+window.addEventListener("click", initAudioPlayer);
