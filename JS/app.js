@@ -1,18 +1,18 @@
 'use strict'
+
 let startgame = document.getElementById('startGame');
-console.log('hi');
+let time = 60;
+
+//grabs the difficulty, and nickname, stores it and then clears the screen, renders the video game and then runs timer which starts the game
 
 function rendergame() {
   let difficulty = document.getElementById('difficulty').value;
   let nickname = document.querySelector('input').value;
-  console.log('hi');
-  console.log(difficulty);
-  console.log(nickname);
+
   clearScreen();
   rendergameScreen();
   beginGame();
 }
-
 
 //DONE
 function clearScreen(){
@@ -20,10 +20,9 @@ function clearScreen(){
   document.getElementById('startForm').style.display = "none"; 
 }
 
-
-//TODO
 function rendergameScreen(){
-  document.querySelector('article').style.display = "";
+  document.getElementById('timer').style.display = "";
+
 }
 
 
@@ -31,14 +30,13 @@ function rendergameScreen(){
 function beginGame(){
   //fills the timer with a sixty second countdown
   //Starts creating fly's until the countdown ends
-  let timer = document.getElementById('timer').nth-child();
-  let score = document.getElementById('timer').nth-child(2);
-  let time = 60;
+  let timer = document.getElementById('countDownTimer');
+  let score = document.getElementById('playerScore');
   var timerTracker = setInterval(runClock, 1000);
   function runClock(){
-    timer.textContext = time;
+    timer.innerHTML = time;
     time--;
-    //TODO based on difficulty, run the timer 
+    //TODO based on difficulty, while the timer is running, spawn in flies 
     if(time <= 0){
       clearInterval(timerTracker);
     }
