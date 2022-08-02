@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,28 +11,30 @@
 
 
 <body>
-<header>
-  <span><h1>Fly Swatter</h1></span>
-  <span>
-<a href="about">About</a>
-  </span>
-</header>
+  <header>
+    <span>
+      <h1>Fly Swatter</h1>
+    </span>
+    <span>
+      <a href="about">About</a>
+    </span>
+  </header>
   <main>
-    <div id="gameContainer"> 
-      <article id="timer">
+    <div id="gameContainer">
+      <article id="timer"style="display: none">
         <span></span>
         <span></span>
         <span>
-          <h3 id="countDownTimer">time: 60</h3>
+          <h3 id="countDownTimer"></h3>
         </span>
         <span>
 
         </span>
         <span>
-          <h3 id="playerScore">score: 420</h3>
+          <h3 id="playerScore"></h3>
         </span>
       </article>
-      <article style="display: none;">
+      <article id = "startForm">
         <h1>Welcome to Fly Swatter<h1>
             <form action="">
               <label for="name">
@@ -49,7 +52,7 @@
               <button id="startGame" type="button">Start Game!
               </button>
             </form>
-          </article>
+      </article>
     </div>
   </main>
   <footer>Game by Miguel Rodriguez, David Suy, and Jackson Gurney</footer>
