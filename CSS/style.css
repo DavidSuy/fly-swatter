@@ -1,5 +1,6 @@
 body {
   font-family: 'Press Start 2P', cursive;
+  box-sizing: border-box;
 }
 h1 {
   font-size: 2rem;
@@ -50,13 +51,14 @@ button {
 }
 
 footer {
-  background-color: brown;
-  margin: 0 auto;
-  width: 70%;
-  left: 20%;
+  width: 100%;
   text-align: center;
   position: fixed;
   bottom: 0px;
+}
+footer span {
+  background-color: brown;
+  padding:10px 50px;
 }
 
 header h1 {
@@ -90,4 +92,9 @@ ol {
   width: 100px;
   margin: auto;
 
+}
+#flyzone{
+  height:575px;
+  background-image: url(https://via.placeholder.com/1221x575);
+  background-repeat: no-repeat;
 }
