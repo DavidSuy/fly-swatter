@@ -8,7 +8,7 @@ let time = 60;
 function rendergame() {
   let difficulty = document.getElementById('difficulty').value;
   let nickname = document.querySelector('input').value;
-
+  
   clearScreen();
   rendergameScreen();
   beginGame();
