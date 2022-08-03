@@ -102,6 +102,7 @@ ol {
 
 }
 #flyzone{
+  width:1221px;
   height:575px;
   background-image: url(https://via.placeholder.com/1221x575);
   background-repeat: no-repeat;
@@ -109,7 +110,7 @@ ol {
 
 /* Flys Class */
 .overlays{
-  position:absolute;
+  position:relative;
   z-index:2;
 }
 
