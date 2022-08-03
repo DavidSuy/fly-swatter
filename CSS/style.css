@@ -113,3 +113,27 @@ ol {
   z-index:2;
 }
 
+li{
+  color: white;
+}
+
+h3{
+  color: white;
+}
+
+span{
+  color:white
+}
+
+button{border:none; cursor:pointer;}
+button#playbtn{
+  background:url(/audio_button/mute.png) no-repeat;
+  width: 12px;
+  height: 14px;
+}
+button#mutebtn{
+  background:url(/audio_button/unmute.png) no-repeat;
+  width: 12px;
+  height: 14px;
+}
+
