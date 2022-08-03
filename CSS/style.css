@@ -140,10 +140,12 @@ option{
   position:relative;
   z-index:2;
 }
+
 form>* {
   display: block;
   width: 200px;
   margin: auto;
+
 }
 
 button{
