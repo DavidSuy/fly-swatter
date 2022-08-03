@@ -7,6 +7,8 @@ let isPlaying = false;
 let userName = "";
 let scoreCounter = 0;
 let indexArr = [];
+let flyCount = 0;
+let flyArray = [];
 
 // DOM Elements
 let startGameButton = document.getElementById("startGame");
@@ -18,7 +20,6 @@ let nickname = document.querySelector("input").value;
 let startForm = document.getElementById("startForm");
 let highScoreList = document.querySelector("#leaderBoard ol");
 let flyzone = document.getElementById("flyzone");
-
 scoreDom.textContent = score;
 
 // Event Listener
@@ -85,26 +86,36 @@ function genLeaderBoard() {
 function startTimer() {
   //fills the timer with a sixty second countdown
   //Starts creating fly's until the countdown ends
+  flyzone.addEventListener("click", checkForFly);
   var timerTracker = setInterval(runClock, 1000);
-  let flyCount = 0;
   function runClock() {
     timer.innerHTML = time;
     time--;
-
-    if (flyCount < maxFlyCount) {
-      flyCount++;
-      flyCreator();
-    }
-
     //TODO based on difficulty, while the timer is running, spawn in flies
     if (time < 0) {
+      clearInterval(flySpawner);
       clearInterval(timerTracker);
       endGame();
     }
   }
+  var flySpawner = setInterval(spawnFlies, 1400)
+  function spawnFlies() {
+    if (flyCount < maxFlyCount) {
+      flyCount++;
+      flyCount++;
+      flyCount++;
+      flyCreator();
+      flyCreator();
+      flyCreator();
+    }
+  }
 }
-
-function flyCreator() {
-  let newFly = new Fly();
-  newFly.renderFly();
+function checkForFly(event) {
+  for (let i in flyArray) {
+    console.log('I tried to look');
+    if (parseInt(event.target.id) === flyArray[i].flyId) {
+      console.log("hi");
+      flyArray[i].swatted();
+    }
+  }
 }

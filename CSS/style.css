@@ -75,7 +75,7 @@ article {
   height:400px;
 }
 #flyzone{
-  cursor: url('/IMG/fly-swatter-pic.PNG'), auto;
+  cursor: url('/IMG/fly-swatter-pic.PNG') 50 50, auto;
   width:1221px;
   height:575px;
   background-image: url(https://via.placeholder.com/1221x575);
