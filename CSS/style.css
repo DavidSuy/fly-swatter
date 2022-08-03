@@ -1,9 +1,12 @@
 body {
   font-family: 'Press Start 2P', cursive;
   box-sizing: border-box;
+  background-image: url(/images/Pixelpunk.gif)
+  background-size: cover;
 }
 h1 {
   font-size: 2rem;
+  color: whitesmoke;
 }
 
 h2 {
@@ -63,6 +66,7 @@ footer {
 footer span {
   background-color: brown;
   padding:10px 50px;
+  color: whitesmoke;
 }
 
 header h1 {
@@ -97,15 +101,15 @@ ol {
   margin: auto;
 
 }
-#flyzone{
+body{
   height:575px;
   background-image: url(https://via.placeholder.com/1221x575);
   background-repeat: no-repeat;
 }
-
 
 /* Flys Class */
 .overlays{
   position:absolute;
   z-index:2;
 }
+
