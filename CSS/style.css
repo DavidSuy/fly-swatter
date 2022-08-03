@@ -89,9 +89,14 @@ article {
 /* Lists */
 
 ol {
-  width: 100px;
+  width: max-content;
   margin: auto;
 
+}
+
+li {
+  width: max-content;
+  margin: 10px;
 }
 
 /* h1-h6 */
