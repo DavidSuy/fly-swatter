@@ -68,14 +68,13 @@ function genLeaderBoard() {
 
   let leaderBoardList = JSON.parse(localStorage.getItem("leaderBoardList"));
   if (leaderBoardList) {
-    leaderBoardList.push([userName, score]);
+    leaderBoardList.push([userName || "Anonymous", score]);
   } else {
     leaderBoardList = [];
-    leaderBoardList.push([userName, score]);
+    leaderBoardList.push([userName || "Anonymous", score]);
   }
 
   leaderBoardList.sort(function (a, b) {
-    // return a[1] - b[1];
     return b[1] - a[1];
   });
 
