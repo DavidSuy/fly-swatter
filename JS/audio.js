@@ -8,6 +8,5 @@ audio.loop = true;
 function initAudioPlayer() {
   audio.muted = false;
   audio.play();
-  console.log("test of life");
 }
 window.addEventListener("click", initAudioPlayer);
