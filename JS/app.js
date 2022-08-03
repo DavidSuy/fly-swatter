@@ -1,7 +1,7 @@
 "use strict";
 
 // Global Variables
-let time = 600;
+let time = 5;
 let score = 0;
 let isPlaying = false;
 let userName = "";
@@ -68,11 +68,12 @@ function genLeaderBoard() {
 
   let leaderBoardList = JSON.parse(localStorage.getItem("leaderBoardList"));
   if (leaderBoardList) {
-    leaderBoardList.push(`PlayerName Score:${score}`);
+    leaderBoardList.push(`${userName} Score:${score}`);
   } else {
     leaderBoardList = [];
-    leaderBoardList.push(`PlayerName Score:${score}`);
+    leaderBoardList.push(`${userName} Score:${score}`);
   }
+
   localStorage.setItem("leaderBoardList", JSON.stringify(leaderBoardList));
   let leaderBoardLists = localStorage.getItem("leaderBoardList");
   console.log(leaderBoardLists);
@@ -113,15 +114,12 @@ function startTimer() {
 }
 function checkForFly(event) {
   for (let i in flyArray) {
-    console.log("I tried to look");
     if (parseInt(event.target.id) === flyArray[i].flyId) {
-      console.log("hi");
       flyArray[i].swatted();
     }
   }
 }
 
 function getUsername() {
-  let test = document.getElementById("userName").value;
-  console.log(test);
+  userName = document.getElementById("userName").value;
 }
