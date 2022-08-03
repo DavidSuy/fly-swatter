@@ -1,6 +1,8 @@
 body {
   font-family: 'Press Start 2P', cursive;
   box-sizing: border-box;
+  background-image: url(/images/Pixelpunk.gif);
+  background-size:  cover;
 }
 h1 {
   font-size: 2rem;
@@ -99,14 +101,16 @@ ol {
   margin: auto;
 
 }
-body{
+#flyzone{
   height:575px;
   background-image: url(https://via.placeholder.com/1221x575);
   background-repeat: no-repeat;
 }
 
-body {
-  background-image: url(/images/Pixelpunk.gif)
+/* Flys Class */
+.overlays{
+  position:absolute;
+  z-index:2;
 }
 
 body{
