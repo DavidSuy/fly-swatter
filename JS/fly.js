@@ -1,6 +1,7 @@
 "use strict";
 
-let flyCords = document.getElementById('flyzone');
+let maxFlyCount = 5;
+let flyCords = document.getElementById("flyzone");
 // Fly Constructor
 function Fly(hp = 1, color = "gray", width = 40, height = 60, speed = 1) {
   this.hp = hp;
@@ -21,23 +22,46 @@ Fly.prototype.genRandLoc = function () {
   this.xCord = Math.floor(Math.random() * (xMax - xMin) + xMin);
   this.yCord = Math.floor(Math.random() * (yMax - yMin) + yMin);
 };
+
 Fly.prototype.renderFly = function () {
   this.genRandLoc();
   //max flys on screen
-  if(flyCords.childElementCount > 5){return;}
-  let img = document.createElement('img');
-  img.setAttribute('class', 'overlays');
+  if (flyCords.childElementCount > maxFlyCount) {
+    return;
+  }
+  let img = document.createElement("img");
+
+  img.setAttribute("class", "overlays");
+  img.id = this.genUniqueId();
   img.src = "IMG/fly-pic.PNG";
   img.width = this.width;
   img.height = this.height;
   flyzone.appendChild(img);
   img.style.gridRow = this.yCord;
   img.style.gridColumn = this.xCord;
+  let fly = document.getElementById(img.id);
+  this.el = fly;
+  fly.addEventListener("click", this.swatted);
 };
-Fly.prototype.swatted = function () {
-  this.hp--;
+
+Fly.prototype.genUniqueId = function () {
+  while (indexArr.length < maxFlyCount) {
+    let randNum = Math.ceil(Math.random() * maxFlyCount);
+    if (!indexArr.includes(randNum)) {
+      indexArr.push(randNum);
+    }
+  }
+  return `fly${indexArr.shift()}`;
+};
+
+Fly.prototype.swatted = function (e) {
+  e.target.remove();
+  score++;
+  scoreDom.textContent = score;
+  flyCreator();
+  // this.hp--;
   if (this.hp === 0) {
-    flyzone.removeChild(this.img);
+    // flyzone.removeChild(this.img);
     scoreCounter++;
   }
 };

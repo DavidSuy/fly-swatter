@@ -9,4 +9,4 @@ function initAudioPlayer() {
   audio.muted = false;
   audio.play();
 }
-window.addEventListener("click", initAudioPlayer);
+// window.addEventListener("click", initAudioPlayer);
