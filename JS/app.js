@@ -1,7 +1,7 @@
 "use strict";
 
 // Global Variables
-let time = 15;
+let time = 60;
 let score = 0;
 let isPlaying = false;
 let userName = "";
@@ -39,7 +39,7 @@ function endGame() {
 }
 // Factory Helper Functions
 
-// Toggle Elments
+// Toggle Elements
 function hideOrShowElement(element, hideOrShow) {
   let el = document.getElementById(element);
   if (hideOrShow === "hide") {

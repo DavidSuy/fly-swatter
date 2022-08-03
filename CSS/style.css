@@ -106,6 +106,9 @@ ol {
   height:575px;
   background-image: url(https://via.placeholder.com/1221x575);
   background-repeat: no-repeat;
+  display:grid;
+  grid-template-columns: repeat(20,5%);
+  grid-template-rows: repeat(10, 10%);
 }
 
 /* Flys Class */
