@@ -1,7 +1,7 @@
 "use strict";
 
 // Global Variables
-let time = 5;
+let time = 8;
 let score = 0;
 let isPlaying = false;
 let userName = "";
@@ -68,11 +68,17 @@ function genLeaderBoard() {
 
   let leaderBoardList = JSON.parse(localStorage.getItem("leaderBoardList"));
   if (leaderBoardList) {
-    leaderBoardList.push(`${userName} Score:${score}`);
+    leaderBoardList.push([userName, score]);
   } else {
     leaderBoardList = [];
-    leaderBoardList.push(`${userName} Score:${score}`);
+    leaderBoardList.push([userName, score]);
   }
+
+  leaderBoardList.sort(function (a, b) {
+    // return a[1] - b[1];
+    return b[1] - a[1];
+  });
+  console.log(leaderBoardList);
 
   localStorage.setItem("leaderBoardList", JSON.stringify(leaderBoardList));
   let leaderBoardLists = localStorage.getItem("leaderBoardList");
@@ -80,7 +86,7 @@ function genLeaderBoard() {
 
   for (let list of leaderBoardList) {
     let li = document.createElement("li");
-    li.textContent = list;
+    li.textContent = `${list[0]}: ${list[1]} Points`;
     highScoreList.appendChild(li);
   }
 }

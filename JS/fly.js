@@ -1,15 +1,15 @@
 "use strict";
 
-let maxFlyCount = 15;
+let maxFlyCount = 5;
 let flyCords = document.getElementById("flyzone");
 // Fly Constructor
-function Fly(hp = 1,flyId, width = 40, height = 60, speed = 1) {
+function Fly(hp = 1, color = "gray", width = 40, height = 60, speed = 1) {
   this.hp = hp;
+  this.color = color;
   this.width = width;
   this.height = height;
   this.speed = speed;
   let xCord, yCord;
-  this.flyId = flyArray.length;
 }
 
 Fly.prototype.genRandLoc = function () {
@@ -26,44 +26,48 @@ Fly.prototype.genRandLoc = function () {
 Fly.prototype.renderFly = function () {
   this.genRandLoc();
   //max flys on screen
-  // if (flyCords.childElementCount > maxFlyCount) {
-  //   return;
-  // }
+  if (flyCords.childElementCount > maxFlyCount) {
+    return;
+  }
   let img = document.createElement("img");
+
   img.setAttribute("class", "overlays");
+  img.id = this.genUniqueId();
   img.src = "IMG/fly-pic.PNG";
-  img.id = this.flyId;
   img.width = this.width;
   img.height = this.height;
   flyzone.appendChild(img);
   img.style.gridRow = this.yCord;
   img.style.gridColumn = this.xCord;
+  let fly = document.getElementById(img.id);
+  this.el = fly;
+  fly.addEventListener("click", this.swatted);
 };
 
-// Fly.prototype.genUniqueId = function () {
-//   while (indexArr.length < maxFlyCount) {
-//     let randNum = Math.ceil(Math.random() * maxFlyCount);
-//     if (!indexArr.includes(randNum)) {
-//       indexArr.push(randNum);
-//     }
-//   }
-//   return `fly${indexArr.shift()}`;
-// };
+Fly.prototype.genUniqueId = function () {
+  while (indexArr.length < maxFlyCount) {
+    let randNum = Math.ceil(Math.random() * maxFlyCount);
+    if (!indexArr.includes(randNum)) {
+      indexArr.push(randNum);
+    }
+  }
+  return `fly${indexArr.shift()}`;
+};
 
-Fly.prototype.swatted = function () {
-  this.hp--;
+Fly.prototype.swatted = function (e) {
+  e.target.remove();
+  // console.log(e.target.id.slice(3, 1));
+  score++;
+  scoreDom.textContent = score;
+  flyCreator();
   // this.hp--;
   if (this.hp === 0) {
     // flyzone.removeChild(this.img);
-    flyCount--;
-    score++;
-    scoreDom.textContent = score;
-    document.getElementById(this.flyId).remove();
+    scoreCounter++;
   }
 };
 //Called in the main file, in the timer file
 function flyCreator() {
   let newFly = new Fly();
-  flyArray.push(newFly);
   newFly.renderFly();
 }
