@@ -9,6 +9,7 @@ function initAudioPlayer() {
   audio.muted = false;
   audio.play();
 }
+
 window.addEventListener("click", initAudioPlayer);
 
 let playButton = document.getElementById("playbtn");
@@ -23,3 +24,4 @@ function mutePlay() {
     check = true;
   }
 }
+
