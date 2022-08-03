@@ -1,7 +1,7 @@
 "use strict";
 
 // Global Variables
-let time = 15;
+let time = 60;
 let score = 0;
 let isPlaying = false;
 let userName = "";
@@ -37,59 +37,9 @@ function endGame() {
   hideOrShowElement("flyzone", "hide");
   // hideFlyzone();
 }
-
-// Fly Constructor
-function Fly(hp = 1, color = "gray", width = 40, height = 60, speed = 1) {
-  this.hp = hp;
-  this.color = color;
-  this.width = width;
-  this.height = height;
-  this.speed = speed;
-  this.xCord = 0;
-  this.yCord = 0;
-}
-
-Fly.prototype.genRandLoc = function () {
-  //this gets the starting x and y axis, as well as the elements width and height, with those four numbers and a little math, you can determine its x and y cords
-  let flyCords = document.getElementById('flyzone').getBoundingClientRect();
-  //I store the articles images here
-  let xMin = flyCords.left
-  //size of the article
-  let xMax = flyCords.right - this.width;
-  let yMin = flyCords.top;
-  //height of the article
-  let yMax = flyCords.bottom - this.height;
-  console.log(flyCords.x);
-  do {
-    this.xCord = Math.floor(Math.random() * (xMax - xMin) + xMin);
-    this.yCord = Math.floor(Math.random() * (yMax - yMin) + yMin);
-    console.log(this.xCord, this.yCord)
-  } while (this.xCord + this.width >= flyCords.right || this.yCord + this.height >= flyCords.bottom);
-};
-Fly.prototype.renderFly = function () {
-  this.genRandLoc();
-  let img = document.createElement('img');
-  img.setAttribute('class', 'overlays');
-  img.src = "IMG/fly-pic.PNG";
-  img.width = this.width;
-  img.height = this.height;
-  flyzone.appendChild(img);
-  console.log(this.xCord);
-  console.log(this.yCord);
-  img.style.left = this.xCord + "px";
-  img.style.top = this.yCord + "px";
-};
-Fly.prototype.swatted = function () {
-  this.hp--;
-  if (this.hp === 0) {
-    flyzone.removeChild(this.img);
-    scoreCounter++;
-  }
-};
-
 // Factory Helper Functions
 
-// Toggle Elments
+// Toggle Elements
 function hideOrShowElement(element, hideOrShow) {
   let el = document.getElementById(element);
   if (hideOrShow === "hide") {
