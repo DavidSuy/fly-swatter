@@ -3,72 +3,26 @@ body {
   box-sizing: border-box;
   background-image: url(/images/Pixelpunk.gif);
   background-size:  cover;
-}
-h1 {
-  font-size: 2rem;
-  color: whitesmoke;
-}
-
-h2 {
-  font-size: 1rem;
+  color: #E4D8B4;
 }
 
 
+
+/* Headers */
 header {
-  background-color: brown;
+  background-color: #E86F68;
   display: flex;
   justify-content: space-between;
 }
-
+header span{
+  padding-left: 80px;
+  padding-right: 20px;
+}
 header a {
   margin-top: 21.44px;
   margin-bottom: 21.44px;
+  color: #272324;
 }
-
-#flyzone {
-  cursor: url('/IMG/fly-swatter-pic.PNG'), auto;
-}
-
-#gameContainer h1 {
-  text-align: center;
-}
-
-article {
-  border: 10px solid gray;
-  width: 80%;
-  margin: auto;
-}
-
-form>* {
-  display: block;
-  width: 200px;
-  margin: auto;
-}
-
-select {
-  text-align: center;
-}
-
-button {
-  width: 180px;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-}
-
-footer {
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  bottom: 0px;
-}
-footer span {
-  background-color: brown;
-  padding:10px 50px;
-  color: whitesmoke;
-}
-
 header h1 {
   display: inline-block;
 }
@@ -80,28 +34,48 @@ header span:nth-child(2) {
 }
 
 header span:nth-child(2) a {
-  color: white;
   text-decoration: none;
 }
 
-#timer {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
+
+
+
+
+
+/* Footers */
+footer {
+  width: 100%;
   text-align: center;
-  width: 98.5%;
+  position: fixed;
+  bottom: 0px;
+}
+footer span {
+  background-color: #E86F68;
+  padding:10px 50px;
 }
 
-#timer span:nth-child(3),
-#timer span:nth-child(5) {
-  border: 10px solid salmon;
+
+
+
+
+/* Articles and articles with id's */
+
+
+#gameContainer h1 {
+  text-align: center;
 }
 
-ol {
-  width: 100px;
+article {
+  border: 10px solid #C2B28F;
+  width: 40%;
   margin: auto;
-
+  background-color: #272324;
+}
+#startform{
+  height:400px;
 }
 #flyzone{
+  cursor: url('/IMG/fly-swatter-pic.PNG'), auto;
   width:1221px;
   height:575px;
   background-image: url(https://via.placeholder.com/1221x575);
@@ -111,35 +85,85 @@ ol {
   grid-template-rows: repeat(10, 10%);
 }
 
-/* Flys Class */
+
+/* Lists */
+
+ol {
+  width: 100px;
+  margin: auto;
+
+}
+
+/* h1-h6 */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+
+
+
+/* timer */
+#timer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  text-align: center;
+  width: 98.5%;
+  background-color: #E4D8B4;
+  color: #272324;
+}
+
+#timer span:nth-child(3),
+#timer span:nth-child(5) {
+  border: 10px solid #E86F68;
+}
+
+
+
+
+
+/* JavaScript */
+input, select, option, button{
+  background-color: #E4D8B4;
+  border-radius: 4px;
+  color:#272324;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+option{
+  font-size: 16px;
+}
 .overlays{
   position:relative;
   z-index:2;
 }
 
-body{
-  background-size: cover;
+form>* {
+  display: block;
+  width: 200px;
+  margin: auto;
+
 }
 
-li{
-  color: white;
+button{
+  border:none; cursor:pointer;
+  background-color: #E4D8B4;
+  width: 180px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-h3{
-  color: white;
-}
-
-span{
-  color:white
-}
-
-button{border:none; cursor:pointer;}
-button#playbtn{
+#playbtn{
   background:url(/audio_button/mute.png) no-repeat;
   width: 12px;
   height: 14px;
 }
-button#mutebtn{
+
+#mutebtn{
   background:url(/audio_button/unmute.png) no-repeat;
   width: 12px;
   height: 14px;
