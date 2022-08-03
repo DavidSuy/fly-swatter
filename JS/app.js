@@ -27,6 +27,7 @@ startGameButton.addEventListener("click", startGame);
 
 // Event Handler
 function startGame() {
+  getUsername();
   hideOrShowElement("startForm", "hide");
   hideOrShowElement("timer", "show");
   hideOrShowElement("flyzone", "show");
@@ -98,7 +99,7 @@ function startTimer() {
       endGame();
     }
   }
-  var flySpawner = setInterval(spawnFlies, 1400)
+  var flySpawner = setInterval(spawnFlies, 1400);
   function spawnFlies() {
     if (flyCount < maxFlyCount) {
       flyCount++;
@@ -112,10 +113,15 @@ function startTimer() {
 }
 function checkForFly(event) {
   for (let i in flyArray) {
-    console.log('I tried to look');
+    console.log("I tried to look");
     if (parseInt(event.target.id) === flyArray[i].flyId) {
       console.log("hi");
       flyArray[i].swatted();
     }
   }
+}
+
+function getUsername() {
+  let test = document.getElementById("userName").value;
+  console.log(test);
 }
