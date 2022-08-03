@@ -102,3 +102,10 @@ ol {
   background-image: url(https://via.placeholder.com/1221x575);
   background-repeat: no-repeat;
 }
+
+
+/* Flys Class */
+.overlays{
+  position:absolute;
+  z-index:2;
+}
