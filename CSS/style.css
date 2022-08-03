@@ -89,17 +89,9 @@ article {
 /* Lists */
 
 ol {
-  /* text-align: center; */
-  /* align-content: center; */
-  /* align-items: center; */
-  width: max-content;
+  width: 100px;
   margin: auto;
 
-}
-
-li {
-  width: max-content;
-  margin: 10px;
 }
 
 /* h1-h6 */
