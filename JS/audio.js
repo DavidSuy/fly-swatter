@@ -10,18 +10,15 @@ function initAudioPlayer() {
   audio.play();
 }
 
-window.addEventListener("click", initAudioPlayer);
-
 let playButton = document.getElementById("playbtn");
-console.log(playButton);
-playbtn.addEventListener("click", mutePlay);
+playButton.addEventListener("click", mutePlay);
 function mutePlay() {
-  if (check === true) {
-    audio.muted = true;
-    check = false;
-  } else {
-    audio.muted = false;
-    check = true;
-  }
+  audio.muted = false;
+  audio.play();
 }
-
+let pauseButton = document.getElementById("mutebtn");
+pauseButton.addEventListener("click", playPlay);
+function playPlay() {
+  audio.muted = true;
+  audio.pause();
+}
