@@ -5,6 +5,13 @@ audio = new Audio();
 audio.src = "Audio/jellyfish_jam.mp3";
 audio.loop = true;
 
+
+function playSplat() {
+  let splat = new Audio();
+  splat.src = "Audio/splat.mp3";
+  audio.loop = false;
+  splat.play();
+}
 function initAudioPlayer() {
   audio.muted = false;
   audio.play();

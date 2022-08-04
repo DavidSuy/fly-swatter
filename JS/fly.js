@@ -3,7 +3,7 @@
 let maxFlyCount = 15;
 let flyCords = document.getElementById("flyzone");
 // Fly Constructor
-function Fly(hp = 1,flyId, width = 40, height = 60, speed = 1) {
+function Fly(hp = 1, flyId, width = 40, height = 60, speed = 1) {
   this.hp = hp;
   this.width = width;
   this.height = height;
@@ -54,13 +54,20 @@ Fly.prototype.swatted = function () {
   this.hp--;
   // this.hp--;
   if (this.hp === 0) {
-    // flyzone.removeChild(this.img);
-    flyCount--;
-    score++;
-    scoreDom.textContent = score;
-    document.getElementById(this.flyId).remove();
+    playSplat();
+    document.getElementById(this.flyId).src = "images/death.gif";
+    setTimeout(() => {  this.delete(); }, 800);
   }
 };
+Fly.prototype.delete = function () {
+  flyCount--;
+  score++;
+  scoreDom.textContent = score;
+  // flyzone.removeChild(this.img);
+  flyCount--;
+  score++;
+  document.getElementById(this.flyId).remove();
+}
 //Called in the main file, in the timer file
 function flyCreator() {
   let newFly = new Fly();

@@ -1,7 +1,7 @@
 "use strict";
 
 // Global Variables
-let time = 5;
+let time = 10;
 let score = 0;
 let isPlaying = false;
 let userName = "";
