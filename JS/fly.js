@@ -60,12 +60,10 @@ Fly.prototype.swatted = function () {
   }
 };
 Fly.prototype.delete = function () {
-  flyCount--;
-  score++;
-  scoreDom.textContent = score;
   // flyzone.removeChild(this.img);
   flyCount--;
   score++;
+  scoreDom.textContent = score;
   document.getElementById(this.flyId).remove();
 }
 //Called in the main file, in the timer file
