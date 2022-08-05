@@ -61,12 +61,7 @@ function attachEventListener(id, callback) {
 }
 
 function genLeaderBoard() {
-  // Dummy data
-  // let leaderBoardList = [
-  //   "name: David Score: 1000",
-  //   "name: Migueal Score: 3000",
-  //   "name: Jackson Score: 2000",
-  // ];
+  let currentScoreList = `${userName}: ${score} Points`;
 
   let leaderBoardList = JSON.parse(localStorage.getItem("leaderBoardList"));
   if (leaderBoardList) {
@@ -88,6 +83,15 @@ function genLeaderBoard() {
     let li = document.createElement("li");
     li.textContent = `${list[0]}: ${list[1]} Points`;
     highScoreList.appendChild(li);
+  }
+
+  console.log(typeof highScoreList);
+  for (let i in highScoreList.children) {
+    if (highScoreList.children[i].textContent === currentScoreList) {
+      console.log(`we in it ${i}`);
+      highScoreList.children[i].style = "background-color: red;";
+      break;
+    }
   }
 }
 
@@ -128,5 +132,9 @@ function checkForFly(event) {
 }
 
 function getUsername() {
-  userName = document.getElementById("userName").value;
+  if (userName === "") {
+    userName = "Anonymous";
+  } else {
+    userName = document.getElementById("userName").value;
+  }
 }

@@ -9,16 +9,18 @@ function Fly(hp = 1, flyId, width = 50, height = 50, speed = 1) {
   this.speed = speed;
   let xCord, yCord;
   this.flyId = flyArray.length;
-
 }
 
 Fly.prototype.swatted = function () {
-  this.hp--; 6
+  this.hp--;
+  6;
   // this.hp--;
   if (this.hp === 0) {
     playSplat();
     document.getElementById(this.flyId).src = "images/death.gif";
-    setTimeout(() => { this.delete(); }, 800);
+    setTimeout(() => {
+      this.delete();
+    }, 800);
   }
 };
 Fly.prototype.delete = function () {
@@ -41,22 +43,20 @@ Fly.prototype.genRandLoc = function () {
 };
 
 Fly.prototype.startLifespan = function (flyId) {
-  let timerFLYFUCK = setInterval(handler, 1000);
+  let timerFLYFum = setInterval(handler, 1000);
   let timeLeft = 9;
   function handler() {
     if (difficulty === "easy") {
       timeLeft -= 1;
-      console.log('test');
     }
     if (difficulty === "medium") {
       timeLeft -= 2;
     }
     if (difficulty === "hard") {
-      timeLeft -= 3
+      timeLeft -= 3;
     }
     if (timeLeft <= 0) {
-      
-      clearInterval(timerFLYFUCK);
+      clearInterval(timerFLYFum);
       flyCount--;
       document.getElementById(flyId).remove();
     }
