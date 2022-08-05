@@ -104,7 +104,7 @@ function startTimer() {
     timer.innerHTML = time;
     time--;
     //TODO based on difficulty, while the timer is running, spawn in flies
-    if (time === 0) {
+    if (time < 0) {
       time--;
       clearInterval(flySpawner);
       clearInterval(timerTracker);
