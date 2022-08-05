@@ -1,0 +1,215 @@
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  box-sizing: border-box;
+  background-image: url(/images/Pixelpunk.gif);
+  background-size:  cover;
+  color: #E4D8B4;
+}
+
+button {
+  background-color: #E4D8B4;
+}
+
+#difficulty {
+  height: 40px;
+}
+
+
+
+/* Headers */
+header {
+  background-color: #E86F68;
+  display: flex;
+  justify-content: space-between;
+}
+header span{
+  padding-left: 80px;
+  padding-right: 20px;
+}
+header a {
+  margin-top: 21.44px;
+  margin-bottom: 21.44px;
+  color: #272324;
+}
+header h1 {
+  display: inline-block;
+}
+
+header span:nth-child(2) {
+  padding-top: 30px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+header span:nth-child(2) a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* Footers */
+footer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+}
+footer span {
+  background-color: #E86F68;
+  padding:10px 50px;
+}
+
+
+
+
+
+/* Articles and articles with id's */
+
+#leaderBoard {
+  margin-top: 15px;
+}
+
+#startGame {
+  margin-top: 30px;
+  height: 40px;
+}
+
+button:hover {
+  background-color: red;
+}
+
+#userName {
+  height: 40px;
+}
+
+#gameContainer h1 {
+  text-align: center;
+}
+
+article {
+  border: 10px solid #C2B28F;
+  width: 40%;
+  margin: auto;
+  background-color: #272324;
+}
+#startForm{
+  height:400px;
+  margin: 80px auto;
+}
+#flyzone{
+  cursor: url('/IMG/fly-swatter-pic.PNG') 50 50, auto;
+  width:1221px;
+  height:540px;
+  background-image: url(/images/flyBackgroundMario.jpg);
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  display:grid;
+  grid-template-columns: repeat(20,5%);
+  grid-template-rows: repeat(10, 10%);
+}
+
+
+/* Lists */
+
+ol {
+  width: max-content;
+  margin: auto;
+
+}
+
+li {
+  width: max-content;
+  margin: 10px;
+}
+
+/* h1-h6 */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+
+
+
+/* timer */
+#timer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  text-align: center;
+  width: 98.5%;
+  background-color: #E4D8B4;
+  color: #272324;
+}
+
+#timer span:nth-child(3),
+#timer span:nth-child(5) {
+  border: 10px solid #E86F68;
+}
+
+
+
+
+
+
+
+/* JavaScript */
+#plsCenter{
+  margin:2% 35%;
+  padding:15px;
+}
+input, select, option, button{
+  background-color: #E4D8B4;
+  border-radius: 4px;
+  color:#272324;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+option{
+  font-size: 16px;
+}
+.overlays{
+  position:relative;
+  z-index:2;
+}
+
+form>* {
+  display: block;
+  width: 200px;
+  margin: auto;
+
+}
+
+button{
+  border:none; cursor:pointer;
+  background-color: #E4D8B4;
+  width: 180px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#playbtn{
+  background:url(/audio_button/mute.png) no-repeat;
+  width: 12px;
+  height: 14px;
+}
+
+#mutebtn{
+  background:url(/audio_button/unmute.png) no-repeat;
+  width: 12px;
+  height: 14px;
+}
+
+#playbtn, #mutebtn{
+  border: 3px black solid; 
+  width: 100px;
+  height: 70px; 
+}
+

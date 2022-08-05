@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fly Swatter</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <header>
+    <span>
+      <h1>Fly Swatter</h1>
+      <span></span>
+      <button id="playbtn">Play Music</button>
+      <span></span>
+      <span></span>
+      <button id="mutebtn">Pause Music</button>
+    </span>
+    <span>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Secret Mode?</a>
+    </span>
+  </header>
+  <main>
+    <div id="gameContainer">
+      <article id="timer" style="display: none">
+        <span></span>
+        <span></span>
+        <span>
+          <h3 id="countDownTimer"></h3>
+        </span>
+        <span>
+
+        </span>
+        <span>
+          <h3 id="playerScore"></h3>
+        </span>
+      </article>
+      <article id="startForm">
+        <h1>Welcome to Fly Swatter<h1>
+            <form action="">
+              <label for="userName">
+                <h2>Please Enter Your Name</h2>
+              </label>
+              <input id="userName" type="text" name="userName">
+              <label for="difficulty">
+                <h2>Select Your Difficulty</h2>
+              </label>
+              <select name="difficulty" id="difficulty">
+                <option style="font-family:'Start 2P'" value="easy">Easy</option>
+                <option style="font-family:'Start 2P'" value="medium">Medium</option>
+                <option style="font-family:'Start 2P'" value="hard">Hard</option>
+              </select>
+              <button id="startGame" type="button">Start Game!
+              </button>
+            </form>
+      </article>
+      <article id="flyzone" style="display: none;"></article>
+      <article id="leaderBoard" style="display: none;">
+        <button onClick="history.go(0)" id="plsCenter">Play Again?</button>
+        <h1>Highscore</h1>
+        <ol>
+        </ol>
+      </article>
+    </div>
+  </main>
+  <footer>Game by Miguel Rodriguez, David Suy, and Jackson Gurney</footer>
+  <footer><span>Game by Miguel Rodriguez, David Suy, and Jackson Gurney</span></footer>
+
+
+  <script src="/JS/fly.js"></script>
+  <script src="/JS/audio.js"></script>
+  <script src="/JS/app.js"></script>
+</body>
+
+</html>
