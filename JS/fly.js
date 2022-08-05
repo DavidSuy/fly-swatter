@@ -2,7 +2,7 @@
 
 let flyCords = document.getElementById("flyzone");
 // Fly Constructor
-function Fly(hp = 1, flyId, width = 60, height = 90, speed = 1) {
+function Fly(hp = 1, flyId, width = 50, height = 50, speed = 1) {
   this.hp = hp;
   this.width = width;
   this.height = height;
@@ -70,7 +70,7 @@ Fly.prototype.renderFly = function () {
   // }
   let img = document.createElement("img");
   img.setAttribute("class", "overlays");
-  img.src = "IMG/fly-pic.PNG";
+  img.src = "images/newFly.gif";
   img.id = this.flyId;
   img.width = this.width;
   img.height = this.height;
