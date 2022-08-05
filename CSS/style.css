@@ -1,9 +1,18 @@
+
 body {
   font-family: 'Press Start 2P', cursive;
   box-sizing: border-box;
   background-image: url(/images/Pixelpunk.gif);
   background-size:  cover;
   color: #E4D8B4;
+}
+
+button {
+  background-color: #E4D8B4;
+}
+
+#difficulty {
+  height: 40px;
 }
 
 
@@ -60,6 +69,22 @@ footer span {
 
 /* Articles and articles with id's */
 
+#leaderBoard {
+  margin-top: 15px;
+}
+
+#startGame {
+  margin-top: 30px;
+  height: 40px;
+}
+
+button:hover {
+  background-color: red;
+}
+
+#userName {
+  height: 40px;
+}
 
 #gameContainer h1 {
   text-align: center;
@@ -127,6 +152,8 @@ h2 {
 #timer span:nth-child(5) {
   border: 10px solid #E86F68;
 }
+
+
 
 
 
