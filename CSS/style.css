@@ -2,7 +2,7 @@
 body {
   font-family: 'Press Start 2P', cursive;
   box-sizing: border-box;
-  background-image: url(images/Pixelpunk.gif);
+  background-image: url(../images/Pixelpunk.gif);
   background-size:  cover;
   color: #E4D8B4;
 }
@@ -101,10 +101,10 @@ article {
   margin: 80px auto;
 }
 #flyzone{
-  cursor: url('IMG/fly-swatter-pic.PNG') 50 50, auto;
+  cursor: url('../IMG/fly-swatter-pic.PNG') 50 50, auto;
   width:1221px;
   height:540px;
-  background-image: url(images/flyBackgroundMario.jpg);
+  background-image: url(../images/flyBackgroundMario.jpg);
   background-size:100% 100%;
   background-repeat: no-repeat;
   display:grid;
