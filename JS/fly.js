@@ -43,7 +43,7 @@ Fly.prototype.genRandLoc = function () {
 };
 
 Fly.prototype.startLifespan = function (flyId) {
-  let timerFLYFUCK = setInterval(handler, 1000);
+  let timerFLYFum = setInterval(handler, 1000);
   let timeLeft = 9;
   function handler() {
     if (difficulty === "easy") {
@@ -56,7 +56,7 @@ Fly.prototype.startLifespan = function (flyId) {
       timeLeft -= 3;
     }
     if (timeLeft <= 0) {
-      clearInterval(timerFLYFUCK);
+      clearInterval(timerFLYFum);
       flyCount--;
       document.getElementById(flyId).remove();
     }
@@ -70,7 +70,6 @@ Fly.prototype.renderFly = function () {
   // }
   let img = document.createElement("img");
   img.setAttribute("class", "overlays");
-
   img.src = "images/newFly.gif";
 
   img.id = this.flyId;
