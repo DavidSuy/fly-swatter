@@ -71,6 +71,7 @@ Fly.prototype.renderFly = function () {
   let img = document.createElement("img");
   img.setAttribute("class", "overlays");
   img.src = "images/newFly.gif";
+
   img.id = this.flyId;
   img.width = this.width;
   img.height = this.height;
