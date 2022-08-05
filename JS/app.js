@@ -1,7 +1,7 @@
 "use strict";
 
 // Global Variables
-let time = 10;
+let time = 30;
 let score = 0;
 let isPlaying = false;
 let userName = "";
@@ -9,6 +9,7 @@ let scoreCounter = 0;
 let indexArr = [];
 let flyCount = 0;
 let flyArray = [];
+let maxFlyCount = 15;
 
 // DOM Elements
 let startGameButton = document.getElementById("startGame");
@@ -27,6 +28,7 @@ startGameButton.addEventListener("click", startGame);
 
 // Event Handler
 function startGame() {
+  mutePlay();
   getUsername();
   hideOrShowElement("startForm", "hide");
   hideOrShowElement("timer", "show");
@@ -98,7 +100,8 @@ function startTimer() {
     timer.innerHTML = time;
     time--;
     //TODO based on difficulty, while the timer is running, spawn in flies
-    if (time < 0) {
+    if (time === 0) {
+      time--;
       clearInterval(flySpawner);
       clearInterval(timerTracker);
       endGame();

@@ -71,14 +71,16 @@ article {
   margin: auto;
   background-color: #272324;
 }
-#startform{
+#startForm{
   height:400px;
+  margin: 80px auto;
 }
 #flyzone{
   cursor: url('/IMG/fly-swatter-pic.PNG') 50 50, auto;
   width:1221px;
-  height:575px;
-  background-image: url(https://via.placeholder.com/1221x575);
+  height:540px;
+  background-image: url(/images/flyBackgroundMario.jpg);
+  background-size:100% 100%;
   background-repeat: no-repeat;
   display:grid;
   grid-template-columns: repeat(20,5%);
@@ -131,6 +133,10 @@ h2 {
 
 
 /* JavaScript */
+#plsCenter{
+  margin:2% 35%;
+  padding:15px;
+}
 input, select, option, button{
   background-color: #E4D8B4;
   border-radius: 4px;
