@@ -1,16 +1,33 @@
 "use strict";
 
-let maxFlyCount = 15;
 let flyCords = document.getElementById("flyzone");
 // Fly Constructor
-function Fly(hp = 1, flyId, width = 40, height = 60, speed = 1) {
+function Fly(hp = 1, flyId, width = 60, height = 90, speed = 1) {
   this.hp = hp;
   this.width = width;
   this.height = height;
   this.speed = speed;
   let xCord, yCord;
   this.flyId = flyArray.length;
+
 }
+
+Fly.prototype.swatted = function () {
+  this.hp--; 6
+  // this.hp--;
+  if (this.hp === 0) {
+    playSplat();
+    document.getElementById(this.flyId).src = "images/death.gif";
+    setTimeout(() => { this.delete(); }, 800);
+  }
+};
+Fly.prototype.delete = function () {
+  // flyzone.removeChild(this.img);
+  flyCount--;
+  score++;
+  scoreDom.textContent = score;
+  document.getElementById(this.flyId).remove();
+};
 
 Fly.prototype.genRandLoc = function () {
   //this gets the starting x and y axis, as well as the elements width and height, with those four numbers and a little math, you can determine its x and y cords
@@ -23,6 +40,28 @@ Fly.prototype.genRandLoc = function () {
   this.yCord = Math.floor(Math.random() * (yMax - yMin) + yMin);
 };
 
+Fly.prototype.startLifespan = function (flyId) {
+  let timerFLYFUCK = setInterval(handler, 1000);
+  let timeLeft = 9;
+  function handler() {
+    if (difficulty === "easy") {
+      timeLeft -= 1;
+      console.log('test');
+    }
+    if (difficulty === "medium") {
+      timeLeft -= 2;
+    }
+    if (difficulty === "hard") {
+      timeLeft -= 3
+    }
+    if (timeLeft <= 0) {
+      
+      clearInterval(timerFLYFUCK);
+      flyCount--;
+      document.getElementById(flyId).remove();
+    }
+  }
+};
 Fly.prototype.renderFly = function () {
   this.genRandLoc();
   //max flys on screen
@@ -38,34 +77,9 @@ Fly.prototype.renderFly = function () {
   flyzone.appendChild(img);
   img.style.gridRow = this.yCord;
   img.style.gridColumn = this.xCord;
+  this.startLifespan(this.flyId);
 };
 
-// Fly.prototype.genUniqueId = function () {
-//   while (indexArr.length < maxFlyCount) {
-//     let randNum = Math.ceil(Math.random() * maxFlyCount);
-//     if (!indexArr.includes(randNum)) {
-//       indexArr.push(randNum);
-//     }
-//   }
-//   return `fly${indexArr.shift()}`;
-// };
-
-Fly.prototype.swatted = function () {
-  this.hp--;
-  // this.hp--;
-  if (this.hp === 0) {
-    playSplat();
-    document.getElementById(this.flyId).src = "images/death.gif";
-    setTimeout(() => {  this.delete(); }, 800);
-  }
-};
-Fly.prototype.delete = function () {
-  // flyzone.removeChild(this.img);
-  flyCount--;
-  score++;
-  scoreDom.textContent = score;
-  document.getElementById(this.flyId).remove();
-}
 //Called in the main file, in the timer file
 function flyCreator() {
   let newFly = new Fly();
