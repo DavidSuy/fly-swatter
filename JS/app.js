@@ -1,7 +1,7 @@
 "use strict";
 
 // Global Variables
-let time = 30;
+let time = 5;
 let score = 0;
 let isPlaying = false;
 let userName = "";
@@ -77,7 +77,7 @@ function genLeaderBoard() {
 
   localStorage.setItem("leaderBoardList", JSON.stringify(leaderBoardList));
   let leaderBoardLists = localStorage.getItem("leaderBoardList");
-  console.log(leaderBoardLists);
+  // console.log(leaderBoardLists);
 
   for (let list of leaderBoardList) {
     let li = document.createElement("li");
@@ -85,10 +85,10 @@ function genLeaderBoard() {
     highScoreList.appendChild(li);
   }
 
-  console.log(typeof highScoreList);
+  // console.log(typeof highScoreList);
   for (let i in highScoreList.children) {
     if (highScoreList.children[i].textContent === currentScoreList) {
-      console.log(`we in it ${i}`);
+      // console.log(`we in it ${i}`);
       highScoreList.children[i].style = "background-color: red;";
       break;
     }
@@ -132,9 +132,11 @@ function checkForFly(event) {
 }
 
 function getUsername() {
+  userName = document.getElementById("userName").value;
   if (userName === "") {
     userName = "Anonymous";
   } else {
-    userName = document.getElementById("userName").value;
+    console.log("we in it");
   }
+  console.log(userName);
 }
