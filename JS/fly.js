@@ -13,7 +13,6 @@ function Fly(hp = 1, flyId, width = 50, height = 50, speed = 1) {
 
 Fly.prototype.swatted = function () {
   this.hp--;
-  6;
   // this.hp--;
   if (this.hp === 0) {
     playSplat();
@@ -26,9 +25,9 @@ Fly.prototype.swatted = function () {
 Fly.prototype.delete = function () {
   // flyzone.removeChild(this.img);
   flyCount--;
+  document.getElementById(this.flyId).remove();
   score++;
   scoreDom.textContent = score;
-  document.getElementById(this.flyId).remove();
 };
 
 Fly.prototype.genRandLoc = function () {
