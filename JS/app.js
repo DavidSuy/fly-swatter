@@ -38,9 +38,11 @@ function startGame() {
 }
 
 function endGame() {
-  genLeaderBoard();
-  hideOrShowElement("leaderBoard", "show");
   hideOrShowElement("flyzone", "hide");
+  setTimeout(() => {
+    genLeaderBoard();
+    hideOrShowElement("leaderBoard", "show");
+  }, 800);
   // hideFlyzone();
 }
 // Factory Helper Functions
