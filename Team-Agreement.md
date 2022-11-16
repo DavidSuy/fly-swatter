@@ -4,8 +4,9 @@ Team Agreement
 
 1. Strengths?
 - Miguel’s strength within this program is CSS and HTML. With the ability to learn new stuff, work as a team, and plan effectively. 
-- Jackson is good at Javascript and referencing css element paths. 
-- David's strengths are structured html layout/ grid. Decent understanding with github and version control
+- Jackson is good at Javascript and referencing css element paths as well as react with bootstrap. 
+- David's strengths are structured html layout/ grid. Decent understanding with github and version control.
+- Jeffery strength are "".
 
 
 2. How can you best utilize these strengths in the execution of your project?
@@ -62,7 +63,7 @@ https://docs.google.com/presentation/d/1rx6eIHuVz8L-wX6oByItGAJeNeK1eD9NRvNXLQV4
 1. What parts of your project will be on github. 
 - The webpage, or file storage and file merging is what we will be using github for. We are using third party software to ensure project goal completion as well as tracking bugs and known issues.
 2. Git ownership?
-- David will be the main owner. He will add Miguel and Jackson to be collaborators.
+- Miguel will be the main owner. He will add Miguel, Jeffery and Jackson to be collaborators.
 3. Git Flow?
 - Separate branch for every feature, have at least two confirms before we merge. 
 4. Git pull request process?
